@@ -1,0 +1,52 @@
+<main>
+
+    <div class="menu-lateral">
+
+        <div class="img">
+            <img src="assets/user.png" alt="User" />
+        </div>
+
+        <div class="user">
+            <span>{{ user?.nome }}</span>
+            <span>{{ user?.cpf }}</span>
+        </div>
+
+        
+    </div>
+
+    <div class="conteudo">
+        <div class="item item1">
+            <h2><img src="assets/money.png" alt="User" style="width: 40px;" />Créditos</h2>
+            <div>
+                <span>Garrafas: {{ user?.quantidadeTotal }}</span>
+                <span>Valor: {{ total | currency:'BRL':'symbol':'1.2-2' }}</span>
+            </div>
+        </div>
+        <div class="item item2">
+            <h2><img src="assets/trash.png" alt="User" style="width: 40px;" />Reciclar</h2>
+            <div>
+                <button [disabled]="loading" (click)="onReciclar()">Iniciar</button>
+                <button [disabled]="!loading" (click)="stopReciclar()">Finalizar</button>
+            </div>
+        </div>
+        <div class="item3">
+            <h2><img src="assets/truck.png" alt="User" style="width: 40px;" />Reciclagens</h2>
+            <div class="item-reciclagens">
+                <div class="sub-item-reciclagens">
+                    <span><strong>Id</strong></span>
+                    <span><strong>Quantidade</strong></span>
+                    <span><strong>Data</strong></span>
+                </div>
+
+                @for (item of user?.reciclagens; track $index) {
+                    <div class="sub-item-reciclagens">
+                        <span>{{ item.id }}</span>
+                        <span>{{ item.quantidade }}</span>
+                        <span>{{ item.data | date:'dd/MM/yyyy' }}</span>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</main>
