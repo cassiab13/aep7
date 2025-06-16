@@ -1,0 +1,148 @@
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-lateral {
+    width: 20vw;
+    height: 100vh;
+    min-width: 300px;
+    background-color: #023b11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 200px;
+
+    .img {
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid #535353;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+      
+    .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.user {
+    padding: 20px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.user span {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #535353;
+}
+
+.conteudo {
+    padding: 50px;
+    width: 80vw;
+    height: 100vh;
+    min-width: 766px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "item1 item3"
+      "item2 item3";
+    gap: 10px;
+    
+    .item1 {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        grid-area: item1;
+    }
+      
+    .item2 {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        grid-area: item2;
+    }
+      
+    .item3 {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 30px;
+        grid-area: item3;
+
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
+
+.item {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-direction: column;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h2 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    div > span {
+        text-align: center;
+    }
+
+    button {
+        cursor: pointer;
+        border-radius: 5px;
+        border: 0;
+        color: white;
+        background-color: #023b11;
+        outline: 0;
+        min-width: 150px;
+        padding: 10px;
+        height: 40px;
+    }
+
+    button:disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+        border: 1px solid #999;
+        opacity: 0.6;
+        pointer-events: none;
+        transition: background-color 0.3s, opacity 0.3s;
+    }
+}
+
+.item-reciclagens {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sub-item-reciclagens {
+    display: flex;
+    justify-content: space-between;
+}
+  

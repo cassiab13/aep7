@@ -1,0 +1,25 @@
+<main>
+
+    <div class="div">
+  
+      <div>
+  
+        <h1>PlastCash</h1>
+  
+      </div>
+  
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+  
+        <input formControlName="nome" type="text" placeholder="Nome" />
+        <input formControlName="cpf" type="text" placeholder="CPF" />
+        <input formControlName="senha" type="password" placeholder="Senha" />
+  
+        <span>
+          <button type="submit" [disabled]="form.invalid">Cadastre-se</button>
+        </span>
+  
+    </form>
+  
+    </div>
+  
+  </main>

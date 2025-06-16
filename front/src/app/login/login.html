@@ -1,0 +1,25 @@
+<main>
+
+    <div class="login">
+  
+      <div class="logo">
+  
+        <h1>PlastCash</h1>
+  
+      </div>
+  
+      <form [formGroup]="form" (ngSubmit)="login()" class="form">
+  
+        <input formControlName="cpf" type="text" placeholder="CPF" />
+        <input formControlName="senha" type="password" placeholder="Senha" />
+  
+        <span>
+          <button (click)="goCadastro()">Registre-se</button>
+          <button type="submit">Login</button>
+        </span>
+  
+      </form>
+  
+    </div>
+  
+  </main>
