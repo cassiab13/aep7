@@ -38,7 +38,7 @@ public class SerialListener implements CommandLineRunner {
                 System.out.println(" - " + port.getSystemPortName());
             }
 
-            String portName = "ttyUSB0";
+            String portName = "COM5";
 
             for (SerialPort port : ports) {
                 if (port.getSystemPortName().equals(portName)) {
